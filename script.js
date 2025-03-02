@@ -10,6 +10,13 @@ const photos = [
 ];
 let currentPhotoIndex = 0;
 
+document.addEventListener("DOMContentLoaded", function() {
+    if (showProgressMessage) {
+        document.getElementById("progress-message").classList.remove("hidden");
+        document.getElementById("letter-content").classList.add("hidden");
+    }
+});
+
 function nextPhoto() {
     currentPhotoIndex = (currentPhotoIndex + 1) % photos.length;
     document.getElementById("photo").src = photos[currentPhotoIndex];
