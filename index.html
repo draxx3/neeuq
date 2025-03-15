@@ -6,8 +6,9 @@
     <title>Love Letter</title>
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
     <script>
-        let underConstruction = true; 
+        let underConstruction = false; 
 
         if (underConstruction) {
             window.location.href = "progress.html";
@@ -20,23 +21,15 @@
         <h2>This Letter is still in progress...</h2>
     </div>
     <div id="letter-content" class="container">
-        <h2>My Love Letter ❤️</h2>
-        <p>Dear Love,</p>
-      <p>
-        You are the most beautiful part of my life. Every moment with you is a
-        treasure, and I love you so much.
-      </p>
-      <p>
-        I am so lucky to have you. I'm thankful because you love me, and I can
-        feel that. I am motivated to do something good because of you. I am very
-        proud to have you in my life. I won't waste the chance you've given me.
-        I have found a very rare gem, and I will treasure it for sure. I'm sorry
-        for bullying you sometimes, and I'm sorry I keep teasing you, but always
-        remember, I love you so much. I want you by my side and to be my number
-        one supporter for the rest of my life.
-      </p>
-      <p>Forever yours,</p>
-      <p>Heneral Lina</p>
+        <h2>My Love Letters ❤️</h2>
+        <div id="letters-container">
+            <h3 id="letter-title"></h3>
+            <p id="letter-body"></p>
+        </div>
+        <div class="buttons">
+            <button onclick="prevLetter()">⬅️ Previous</button>
+            <button onclick="nextLetter()">➡️ Next</button>
+        </div>
         <div class="heart" onclick="goToNextPage()">❤️</div>
     </div>
 </body>
